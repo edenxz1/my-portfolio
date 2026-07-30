@@ -1,0 +1,509 @@
+:root {
+  color: #262626;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #fff;
+}
+
+a {
+  color: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 20px 24px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  color: #262626;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  position: relative;
+  color: #595959;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-links a::after {
+  position: absolute;
+  right: 0;
+  bottom: -7px;
+  left: 0;
+  height: 2px;
+  content: "";
+  background: #1677ff;
+  border-radius: 999px;
+  opacity: 0;
+  transform: scaleX(0);
+  transition: 180ms ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #1677ff;
+}
+
+.nav-links a.active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero {
+  color: #fff;
+  background: linear-gradient(115deg, #0a1a0b, #1a2e1c, #163e20, #0b470b);
+  background-size: 400% 400%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+.home-hero {
+  padding: 100px 24px;
+}
+
+.journey-hero {
+  padding: 80px 24px;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 40px;
+  display: block;
+  object-fit: cover;
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.24);
+}
+
+.hero h1 {
+  margin: 0 0 20px;
+  color: #fff;
+  font-size: clamp(2.5rem, 7vw, 4rem);
+  line-height: 1.1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.journey-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+}
+
+.journey-hero p {
+  margin-bottom: 0;
+  font-size: 1.3rem;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.button {
+  min-width: 132px;
+  padding: 12px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  background: #1677ff;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.button:hover {
+  background: #4096ff;
+  transform: translateY(-2px);
+}
+
+.button svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.content-section {
+  padding: 80px 24px;
+}
+
+.narrow-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content-section h2,
+.stats h2,
+.journey-cta h2 {
+  margin: 0 0 60px;
+  color: #262626;
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: 650;
+  text-align: center;
+}
+
+.about-copy {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #595959;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.skills-section {
+  background: #fafafa;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.skill-card {
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.skill-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.skill-card p {
+  margin: 0;
+  color: #737373;
+  line-height: 1.55;
+}
+
+.journey-section {
+  padding: 80px 24px 0;
+}
+
+.wide-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.milestones-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+}
+
+.milestone-card {
+  padding: 40px;
+  background: linear-gradient(135deg, var(--tint), #fff);
+  border: 1px solid #f0f0f0;
+  border-left: 6px solid var(--accent);
+  border-radius: 16px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.milestone-card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+}
+
+.milestone-meta {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.eyebrow {
+  padding: 7px 13px;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: var(--tint);
+  border: 1px solid var(--tag-border);
+  border-radius: 7px;
+}
+
+.date {
+  padding-top: 8px;
+  color: #8c8c8c;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.milestone-card h2 {
+  margin: 0 0 18px;
+  font-size: 1.6rem;
+}
+
+.milestone-card > p {
+  margin: 0 0 20px;
+  color: #595959;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag-list span {
+  padding: 4px 10px;
+  color: #fff;
+  font-size: 0.85rem;
+  background: var(--accent);
+  border-radius: 6px;
+}
+
+.stats {
+  margin-top: 60px;
+  padding: 50px;
+  background: #fafafa;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.stats h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.stats-grid div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stats strong {
+  font-size: 3rem;
+}
+
+.stats span {
+  color: #595959;
+  font-size: 1.05rem;
+}
+
+.blue {
+  color: #1890ff;
+}
+
+.green {
+  color: #52c41a;
+}
+
+.purple {
+  color: #722ed1;
+}
+
+.journey-cta {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.journey-cta h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.journey-cta p {
+  max-width: 500px;
+  margin: 0 auto;
+  color: #595959;
+  font-size: 1.1rem;
+  line-height: 1.65;
+}
+
+.site-footer {
+  padding: 40px 24px;
+  color: #bfbfbf;
+  background: #1a2e1c;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    padding: 16px 20px;
+  }
+
+  .brand {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .home-hero {
+    padding: 72px 20px;
+  }
+
+  .journey-hero,
+  .content-section,
+  .journey-section {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .skills-grid,
+  .milestones-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .milestones-grid {
+    gap: 24px;
+  }
+
+  .milestone-card {
+    padding: 28px;
+  }
+
+  .stats {
+    padding: 36px 24px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .profile-image {
+    width: 130px;
+    height: 130px;
+  }
+
+  .milestone-meta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .date {
+    padding-top: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
