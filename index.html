@@ -1,138 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Eduardo Henrique Krokoscz — Software Engineering student and web developer."
+    />
     <title>Eduardo H Krokoscz - Software Engineer</title>
-    <!-- Ant Design CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/antd/5.8.4/reset.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/antd/5.8.4/antd.min.css" rel="stylesheet">
-    <!-- Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <style>
-        @keyframes gradient-shift {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-        
-        .animated-gradient {
-            background: linear-gradient(115deg, #0a1a0b, #1a2e1c, #163e20, #0b470b);
-            background-size: 400% 400%;
-            animation: gradient-shift 8s ease infinite;
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav style="background: white; padding: 20px 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100;">
-        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
-            <h1 style="margin: 0; font-size: 1.5rem; font-weight: 700; color: #262626;">Portfolio</h1>
-            <div style="display: flex; gap: 30px;">
-                <a href="index.html" style="color: #595959; text-decoration: none; font-weight: 500;">Home</a>
-                <a href="learningJourney.html" style="color: #595959; text-decoration: none; font-weight: 500;">Learning Journey</a>
-            </div>
-        </div>
-
-    </nav>
-    <!-- Main Container -->
-    <div class="ant-layout" style="min-height: 100vh; background: #ffffff;">
-        
-        <!-- Hero Section -->
-        <section class="animated-gradient" style="padding: 100px 24px; color: white;">
-            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                
-                <!-- Profile Image -->
-                <div style="width: 150px; height: 150px; margin: 0 auto 40px; background: rgba(255,255,255,0.1); border: 3px solid rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); position: relative; overflow: hidden;">
-                    <!-- <img src="https://via.placeholder.com/150x150/ffffff/cccccc?text=Photo" alt="Profile" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"> -->
-                    <img src="Images/pfp.png" alt="Profile" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
-                </div>
-                
-                <!-- Main Heading -->
-                <h1 style="font-size: 4rem; font-weight: 700; margin-bottom: 20px; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
-                    Eduardo Henrique Krokoscz
-                </h1>
-                
-                <!-- Subtitle -->
-                <p style="font-size: 1.8rem; color: rgba(255,255,255,0.9); margin-bottom: 30px; font-weight: 500;">
-                    Software Engineering Student
-                </p>
-
-                <!-- Contact Buttons -->
-                <div class="ant-space ant-space-horizontal">
-                    <a href="https://www.linkedin.com/in/eduardo-henrique-krokoscz-0a1953372/" target="_blank"
-                    class="ant-btn ant-btn-primary ant-btn-lg"
-                    style="border-color: white; color: white; margin-right: 16px; font-weight: 600; text-decoration: none;">
-                    <i class="fab fa-linkedin" style="margin-right: 8px;"></i> LinkedIn
-                    </a>
-
-                    <a href="https://github.com/Edeenn1" target="_blank"
-                    class="ant-btn ant-btn-primary ant-btn-lg"
-                    style="border-color: white; color: white; margin-right: 16px; font-weight: 600; text-decoration: none;">
-                    <i class="fab fa-github" style="margin-right: 8px;"></i> GitHub
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section style="padding: 80px 24px;">
-            <div style="max-width: 800px; margin: 0 auto;">
-                
-                <h2 style="font-size: 3rem; font-weight: 600; text-align: center; margin-bottom: 60px; color: #262626;">
-                    About Me
-                </h2>
-                
-                <div style="font-size: 1.2rem; line-height: 1.8; color: #595959; text-align: left; max-width: 700px; margin: 0 auto;">
-                    <p style="margin-bottom: 0;">
-                        Hello! I'm Eduardo Henrique Krokoscz, a passionate Software Engineering student with a keen interest in web development, technology, and continuous learning. I enjoy building creative solutions, exploring new frameworks, and collaborating on projects that make a difference. My journey is driven by curiosity and a desire to grow as a developer and as a person.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section style="padding: 80px 24px; background: #fafafa;">
-            <div style="max-width: 800px; margin: 0 auto;">
-                
-                <h2 style="font-size: 3rem; font-weight: 600; text-align: center; margin-bottom: 60px; color: #262626;">
-                    Skills
-                </h2>
-                
-                <div class="ant-row ant-row-gutter" style="row-gap: 40px;">
-                    
-                    <!-- Technical Skills -->
-                    <div class="ant-col ant-col-24 ant-col-md-12">
-                        
-                        <div>
-                            <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 24px;">
-                                <div style="font-weight: 600; color: #262626; font-size: 1.1rem;">HTML</div>
-                                <div style="color: #8c8c8c; font-size: 0.95rem; margin-top: 4px;">Semantic markup • Document structure • Accessibility</div>
-                            </div>
-                            
-                            <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 24px;">
-                                <div style="font-weight: 600; color: #262626; font-size: 1.1rem;">CSS</div>
-                                <div style="color: #8c8c8c; font-size: 0.95rem; margin-top: 4px;">Responsive design • Flexbox • Grid • Animations</div>
-                            </div>
-                        </div>
-                    </div>
-                </section>    
-    
-
-        <!-- Footer -->
-        <footer style="padding: 40px 24px; background: #1a2e1c; text-align: center;">
-            <div style="max-width: 800px; margin: 0 auto;">
-                <p style="color: #bfbfbf; margin-top: 0px; margin-bottom: 0; font-size: 0.9rem;">
-                    © 2025 Eduardo H Krokoscz
-                </p>
-            </div>
-        </footer>
-    </div>
-</body>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
