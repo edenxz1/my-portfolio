@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Journey - Eduardo H Krokoscz</title>
+    <!-- Ant Design CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/antd/5.8.4/reset.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/antd/5.8.4/antd.min.css" rel="stylesheet">
+    <style>
+        @keyframes gradient-shift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        .animated-gradient {
+            background: linear-gradient(115deg, #0a1a0b, #1a2e1c, #163e20, #0b470b);
+            background-size: 400% 400%;
+            animation: gradient-shift 8s ease infinite;
+        }
+        
+        .milestone-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .milestone-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav style="background: white; padding: 20px 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+            <h1 style="margin: 0; font-size: 1.5rem; font-weight: 700; color: #262626;">Eduardo Krokoscz</h1>
+            <div style="display: flex; gap: 30px;">
+                <a href="index.html" style="color: #595959; text-decoration: none; font-weight: 500;">Home</a>
+                <a href="learningJourney.html" style="color: #595959; text-decoration: none; font-weight: 500;">Learning Journey</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="ant-layout" style="min-height: 100vh; background: #ffffff;">
+        
+        <!-- Hero Section -->
+        <section class="animated-gradient" style="padding: 80px 24px; color: white;">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h1 style="font-size: 3.5rem; font-weight: 700; margin-bottom: 20px; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                    Learning Milestones
+                </h1>
+                <p style="font-size: 1.3rem; color: rgba(255,255,255,0.9); margin-bottom: 0; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+                    Key achievements and breakthroughs in my web development journey.
+                </p>
+            </div>
+        </section>
+
+        <!-- Milestones -->
+        <section style="padding: 80px 24px;">
+            <div style="max-width: 1000px; margin: 0 auto;">
+                
+                <div class="ant-row ant-row-gutter" style="row-gap: 40px;">
+                    
+                    <!-- Milestone 1: Future Goals (Latest) -->
+                    <div class="ant-col ant-col-24 ant-col-lg-12">
+                        <div class="ant-card milestone-card" style="padding: 40px; border-radius: 16px; border-left: 6px solid #f5222d; background: linear-gradient(135deg, #fff1f0, #ffebe6); height: 100%;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+                                <div class="ant-tag" style="background: #fff2f0; color: #f5222d; border: 1px solid #ffb3b3; font-weight: 600; font-size: 0.9rem; padding: 8px 16px;">
+                                    🎯 Next Challenge
+                                </div>
+                                <span style="color: #8c8c8c; font-size: 0.9rem;">Coming Soon</span>
+                            </div>
+                            <h3 style="font-size: 1.6rem; font-weight: 700; color: #262626; margin-bottom: 20px;">
+                                Backend Development
+                            </h3>
+                            <p style="color: #595959; margin-bottom: 20px; line-height: 1.7; font-size: 1.05rem;">
+                                Ready to dive deeper into full-stack development. Next goals: learning databases, APIs, and server-side programming. The frontend foundation is solid - time to build the complete picture!
+                            </p>
+                            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                                <span class="ant-tag" style="background: #f5222d; color: white;">APIs</span>
+                                <span class="ant-tag" style="background: #f5222d; color: white;">Databases</span>
+                                <span class="ant-tag" style="background: #f5222d; color: white;">Full-Stack</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 2: Portfolio Launch -->
+                    <div class="ant-col ant-col-24 ant-col-lg-12">
+                        <div class="ant-card milestone-card" style="padding: 40px; border-radius: 16px; border-left: 6px solid #13c2c2; height: 100%;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+                                <div class="ant-tag" style="background: #e6fffb; color: #13c2c2; border: 1px solid #87e8de; font-weight: 600; font-size: 0.9rem; padding: 8px 16px;">
+                                    🚀 Launch Day
+                                </div>
+                                <span style="color: #8c8c8c; font-size: 0.9rem;">Week 2</span>
+                            </div>
+                            <h3 style="font-size: 1.6rem; font-weight: 700; color: #262626; margin-bottom: 20px;">
+                                Professional Portfolio Live
+                            </h3>
+                            <p style="color: #595959; margin-bottom: 20px; line-height: 1.7; font-size: 1.05rem;">
+                                Deployed my first professional portfolio website using Ant Design and modern engineering practices. From project structure to live deployment - this represents my transformation into thinking like an engineer.
+                            </p>
+                            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                                <span class="ant-tag" style="background: #13c2c2; color: white;">Live Deployment</span>
+                                <span class="ant-tag" style="background: #13c2c2; color: white;">Professional UI</span>
+                                <span class="ant-tag" style="background: #13c2c2; color: white;">Engineering Mindset</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Milestone 3: Professional Tools -->
+                    <div class="ant-col ant-col-24 ant-col-lg-12">
+                        <div class="ant-card milestone-card" style="padding: 40px; border-radius: 16px; border-left: 6px solid #fa541c; height: 100%;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+                                <div class="ant-tag" style="background: #fff2e8; color: #fa541c; border: 1px solid #ffbb96; font-weight: 600; font-size: 0.9rem; padding: 8px 16px;">
+                                    🛠️ Professional Tools
+                                </div>
+                                <span style="color: #8c8c8c; font-size: 0.9rem;">Week 2</span>
+                            </div>
+                            <h3 style="font-size: 1.6rem; font-weight: 700; color: #262626; margin-bottom: 20px;">
+                                Discovered Ant Design
+                            </h3>
+                            <p style="color: #595959; margin-bottom: 20px; line-height: 1.7; font-size: 1.05rem;">
+                                Learned the difference between custom CSS and professional UI libraries. Understanding component systems, design tokens, and rapid UI development. This is how real engineers build interfaces efficiently.
+                            </p>
+                            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                                <span class="ant-tag" style="background: #fa541c; color: white;">Ant Design</span>
+                                <span class="ant-tag" style="background: #fa541c; color: white;">Component Libraries</span>
+                                <span class="ant-tag" style="background: #fa541c; color: white;">Professional UI</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Milestone 4: Engineering Patterns -->
+                    <div class="ant-col ant-col-24 ant-col-lg-12">
+                        <div class="ant-card milestone-card" style="padding: 40px; border-radius: 16px; border-left: 6px solid #722ed1; height: 100%;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+                                <div class="ant-tag" style="background: #f9f0ff; color: #722ed1; border: 1px solid #d3adf7; font-weight: 600; font-size: 0.9rem; padding: 8px 16px;">
+                                    📐 Design Patterns
+                                </div>
+                                <span style="color: #8c8c8c; font-size: 0.9rem;">Week 1</span>
+                            </div>
+                            <h3 style="font-size: 1.6rem; font-weight: 700; color: #262626; margin-bottom: 20px;">
+                                Learned Basic Engineering Patterns
+                            </h3>
+                            <p style="color: #595959; margin-bottom: 20px; line-height: 1.7; font-size: 1.05rem;">
+                                Applied professional engineering principles: clear hierarchy, consistent spacing, and mobile-first design. Built multi-page sites with proper navigation and semantic HTML structure that scales.
+                            </p>
+                            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                                <span class="ant-tag" style="background: #722ed1; color: white;">Mobile-First Design</span>
+                                <span class="ant-tag" style="background: #722ed1; color: white;">Semantic HTML</span>
+                                <span class="ant-tag" style="background: #722ed1; color: white;">Professional Structure</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Milestone 5: System Architecture -->
+                    <div class="ant-col ant-col-24 ant-col-lg-12">
+                        <div class="ant-card milestone-card" style="padding: 40px; border-radius: 16px; border-left: 6px solid #52c41a; height: 100%;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+                                <div class="ant-tag" style="background: #f6ffed; color: #52c41a; border: 1px solid #b7eb8f; font-weight: 600; font-size: 0.9rem; padding: 8px 16px;">
+                                    🏗️ Architecture
+                                </div>
+                                <span style="color: #8c8c8c; font-size: 0.9rem;">Week 1</span>
+                            </div>
+                            <h3 style="font-size: 1.6rem; font-weight: 700; color: #262626; margin-bottom: 20px;">
+                                Understood Software Architecture
+                            </h3>
+                            <p style="color: #595959; margin-bottom: 20px; line-height: 1.7; font-size: 1.05rem;">
+                                Learned the four core components behind every application: frontend, backend, database, and infrastructure. Understanding how computers communicate through client-server models and HTTP protocols.
+                            </p>
+                            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                                <span class="ant-tag ant-tag-green">Software Architecture</span>
+                                <span class="ant-tag ant-tag-green">Client-Server Model</span>
+                                <span class="ant-tag ant-tag-green">HTTP Protocols</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Milestone 6: Engineering Mindset -->
+                    <div class="ant-col ant-col-24 ant-col-lg-12">
+                        <div class="ant-card milestone-card" style="padding: 40px; border-radius: 16px; border-left: 6px solid #1890ff; height: 100%;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+                                <div class="ant-tag" style="background: #e6f7ff; color: #1890ff; border: 1px solid #91d5ff; font-weight: 600; font-size: 0.9rem; padding: 8px 16px;">
+                                    🧠 Mindset Shift
+                                </div>
+                                <span style="color: #8c8c8c; font-size: 0.9rem;">Week 1</span>
+                            </div>
+                            <h3 style="font-size: 1.6rem; font-weight: 700; color: #262626; margin-bottom: 20px;">
+                                Developed Engineering Mindset
+                            </h3>
+                            <p style="color: #595959; margin-bottom: 20px; line-height: 1.7; font-size: 1.05rem;">
+                                Transformed from user to builder through systematic problem-solving, experimentation, and cause-effect-adjust thinking. Started learning journal for continuous growth and professional preparation.
+                            </p>
+                            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                                <span class="ant-tag ant-tag-blue">Systematic Problem-Solving</span>
+                                <span class="ant-tag ant-tag-blue">Growth Mindset</span>
+                                <span class="ant-tag ant-tag-blue">Professional Preparation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Section -->
+                <div style="background: #fafafa; padding: 50px; border-radius: 16px; margin-top: 60px; text-align: center;">
+                    <h3 style="font-size: 2rem; font-weight: 600; color: #262626; margin-bottom: 40px;">
+                        Learning Journey Stats
+                    </h3>
+                    <div class="ant-row">
+                        <div class="ant-col ant-col-8">
+                            <div style="font-size: 3rem; font-weight: 700; color: #1890ff; margin-bottom: 10px;">6</div>
+                            <div style="color: #595959; font-size: 1.1rem;">Major Milestones</div>
+                        </div>
+                        <div class="ant-col ant-col-8">
+                            <div style="font-size: 3rem; font-weight: 700; color: #52c41a; margin-bottom: 10px;">15+</div>
+                            <div style="color: #595959; font-size: 1.1rem;">Technologies Learned</div>
+                        </div>
+                        <div class="ant-col ant-col-8">
+                            <div style="font-size: 3rem; font-weight: 700; color: #722ed1; margin-bottom: 10px;">2</div>
+                            <div style="color: #595959; font-size: 1.1rem;">Weeks of Growth</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div style="text-align: center; padding: 60px 0;">
+                    <h3 style="font-size: 2rem; font-weight: 600; color: #262626; margin-bottom: 20px;">
+                        The Journey Continues...
+                    </h3>
+                    <p style="font-size: 1.1rem; color: #595959; margin-bottom: 0; max-width: 500px; margin-left: auto; margin-right: auto;">
+                        Every milestone builds toward becoming a full-stack developer. Each breakthrough opens new possibilities.
+                    </p>
+                </div>
+            </div>
+        </section>
+       <!-- Footer -->
+        <footer style="padding: 40px 24px; background: #1a2e1c; text-align: center;">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <p style="color: #bfbfbf; margin-top: 0px; margin-bottom: 0; font-size: 0.9rem;">
+                    © 2025 Eduardo H Krokoscz
+                </p>
+            </div>
+        </footer> 
+    </div>
+</body>
+</html>
