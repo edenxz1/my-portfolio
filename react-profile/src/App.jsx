@@ -1,5 +1,35 @@
-import { NavLink, Route, Routes } from "react-router-dom";
-import profileImage from "../Images/pfp.png";
+import { Navigate, NavLink, Route, Routes } from "react-router-dom";
+import profileImage from "../../Images/pfp.png";
+
+const profile = {
+  name: "Eduardo Henrique Krokoscz",
+  role: "Software Engineering Student",
+  image: profileImage,
+  bio: "Hello! I'm Eduardo Henrique Krokoscz, a passionate Software Engineering student with a keen interest in web development, technology, and continuous learning. I enjoy building creative solutions, exploring new frameworks, and collaborating on projects that make a difference. My journey is driven by curiosity and a desire to grow as a developer and as a person.",
+  socialLinks: [
+    {
+      label: "LinkedIn",
+      type: "linkedin",
+      href: "https://www.linkedin.com/in/eduardo-henrique-krokoscz-0a1953372/",
+    },
+    {
+      label: "GitHub",
+      type: "github",
+      href: "https://github.com/Edeenn1",
+    },
+  ],
+};
+
+const skills = [
+  {
+    name: "HTML",
+    details: "Semantic markup • Document structure • Accessibility",
+  },
+  {
+    name: "CSS",
+    details: "Responsive design • Flexbox • Grid • Animations",
+  },
+];
 
 const milestones = [
   {
@@ -78,7 +108,7 @@ function Header() {
           Portfolio
         </NavLink>
         <div className="nav-links">
-          <NavLink end to="/">
+          <NavLink to="/profiles/eduardo-krokoscz">
             Home
           </NavLink>
           <NavLink to="/learning-journey">Learning Journey</NavLink>
@@ -112,65 +142,67 @@ function SocialIcon({ type }) {
   );
 }
 
-function HomePage() {
+function ProfileHero({ profile }) {
+  return (
+    <section className="hero home-hero">
+      <div className="hero-content">
+        <img className="profile-image" src={profile.image} alt={profile.name} />
+        <h1>{profile.name}</h1>
+        <p>{profile.role}</p>
+        <div className="social-links">
+          {profile.socialLinks.map((link) => (
+            <a
+              className="button"
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+              key={link.label}
+            >
+              <SocialIcon type={link.type} />
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function AboutSection({ bio }) {
+  return (
+    <section className="content-section">
+      <div className="narrow-container">
+        <h2>About Me</h2>
+        <p className="about-copy">{bio}</p>
+      </div>
+    </section>
+  );
+}
+
+function SkillsSection({ skills }) {
+  return (
+    <section className="content-section skills-section">
+      <div className="narrow-container">
+        <h2>Skills</h2>
+        <div className="skills-grid">
+          {skills.map((skill) => (
+            <article className="skill-card" key={skill.name}>
+              <h3>{skill.name}</h3>
+              <p>{skill.details}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function HomePage({ profile, skills }) {
   return (
     <main>
-      <section className="hero home-hero">
-        <div className="hero-content">
-          <img className="profile-image" src={profileImage} alt="Eduardo Henrique Krokoscz" />
-          <h1>Eduardo Henrique Krokoscz</h1>
-          <p>Software Engineering Student</p>
-          <div className="social-links">
-            <a
-              className="button"
-              href="https://www.linkedin.com/in/eduardo-henrique-krokoscz-0a1953372/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <SocialIcon type="linkedin" />
-              LinkedIn
-            </a>
-            <a
-              className="button"
-              href="https://github.com/Edeenn1"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <SocialIcon type="github" />
-              GitHub
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="content-section">
-        <div className="narrow-container">
-          <h2>About Me</h2>
-          <p className="about-copy">
-            Hello! I&apos;m Eduardo Henrique Krokoscz, a passionate Software Engineering
-            student with a keen interest in web development, technology, and continuous
-            learning. I enjoy building creative solutions, exploring new frameworks, and
-            collaborating on projects that make a difference. My journey is driven by
-            curiosity and a desire to grow as a developer and as a person.
-          </p>
-        </div>
-      </section>
-
-      <section className="content-section skills-section">
-        <div className="narrow-container">
-          <h2>Skills</h2>
-          <div className="skills-grid">
-            <article className="skill-card">
-              <h3>HTML</h3>
-              <p>Semantic markup • Document structure • Accessibility</p>
-            </article>
-            <article className="skill-card">
-              <h3>CSS</h3>
-              <p>Responsive design • Flexbox • Grid • Animations</p>
-            </article>
-          </div>
-        </div>
-      </section>
+      <ProfileHero profile={profile} />
+      <AboutSection bio={profile.bio} />
+      <SkillsSection skills={skills} />
     </main>
   );
 }
@@ -253,8 +285,13 @@ export default function App() {
     <div className="app">
       <Header />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Navigate replace to="/profiles/eduardo-krokoscz" />} />
+        <Route
+          path="/profiles/eduardo-krokoscz"
+          element={<HomePage profile={profile} skills={skills} />}
+        />
         <Route path="/learning-journey" element={<LearningJourneyPage />} />
+        <Route path="*" element={<Navigate replace to="/profiles/eduardo-krokoscz" />} />
       </Routes>
       <Footer />
     </div>
